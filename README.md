@@ -5,11 +5,11 @@ A YNAB (https://app.ynab.com) browser plugin that helps users view their date so
 
 **Before:**
 
-[Before Image](demo/before-example.png)
+![Before Image](./demo/before-example.png)
 
 **After:**
 
-[After Image](demo/after-example.png)
+![After Image](./demo/after-example.png)
 
 ## How to Use
 
@@ -39,4 +39,4 @@ for(let i = 1; i < dateElementsOnAccountPage .length; i++){
 
 ## Disclaimer
 
-This project is not affiliated with YNAB (https://www.ynab.com/), it's just a brower plugin to help 
+This project is not affiliated with YNAB (https://www.ynab.com/), it's just a brower plugin to help solve this specific problem and make the UI more accessible.
