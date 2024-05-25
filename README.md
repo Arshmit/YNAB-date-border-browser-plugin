@@ -1,22 +1,42 @@
 
-## How to
+## What is this?
+
+A YNAB (https://app.ynab.com) browser plugin that helps users view their date sorted transactions clearly with borders around each day.
+
+**Before:**
+
+[Before Image](demo/before-example.png)
+
+**After:**
+
+[After Image](demo/after-example.png)
+
+## How to Use
+
+### Firefox
 
 From https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 > In Firefox: Open the about:debugging page, click the This Firefox option, click the Load Temporary Add-on button, then select any file in your extension's directory.
 
+### Chrome
 
-## The backlog
+..todo
 
-### 1. Add Icon
+### Without extension, using dev tools (F12) [FOR DEVELOPMENT ONLY!]
 
-To add an icon, add this to the manifest
+Open browser dev tools and then enter the following in the console. This will render borders around the transactions for given dates.
 
-```json
-  "icons": {
-    "48": "icons/border-48.png"
-  },
+```js
+// fetch a list of all the date elements
+let dateElementsOnAccountPage = document.querySelectorAll('.ynab-grid-cell-date.user-data')
+// start from 1 instead of 0, because we compare current date with previous date to decide if we want to draw a top border
+for(let i = 1; i < dateElementsOnAccountPage .length; i++){
+    if(dateElementsOnAccountPage[i-1].innerHTML.trim() !== dateElementsOnAccountPage [i].innerHTML.trim()){
+        dateElementsOnAccountPage[i].parentElement.style.borderTop = '2px solid #405163'
+    }
+}
 ```
 
-### 2. Package and release plugin
+## Disclaimer
 
-### 3. Work only when sorted by Dates
+This project is not affiliated with YNAB (https://www.ynab.com/), it's just a brower plugin to help 
