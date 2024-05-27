@@ -1,4 +1,3 @@
-
 ## What is this?
 
 A YNAB (https://app.ynab.com) browser plugin that helps users view their date sorted transactions clearly with borders around each day.
@@ -11,7 +10,17 @@ A YNAB (https://app.ynab.com) browser plugin that helps users view their date so
 
 ![After Image](./demo/after-example.png)
 
-## How to Use
+## Production releases
+
+### Firefox 
+
+Add-on available at https://addons.mozilla.org/en-US/firefox/addon/ynab-date-borders/
+
+### Chrome 
+
+Chrome exenstion coming soon!
+
+## How to debug
 
 ### Firefox
 
@@ -36,6 +45,10 @@ for(let i = 1; i < dateElementsOnAccountPage .length; i++){
     }
 }
 ```
+
+## Contribution
+
+Would you like to contribute? come check out the issue tab, start development and open a PR for me to review.
 
 ## Disclaimer
 
